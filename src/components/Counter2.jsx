@@ -1,15 +1,15 @@
 import React, { useState } from 'react'
 
 const Counter2 = () => {
-  let num = 0
+  const [num, setNum] = useState(0)
 
   const onIncrease = () => {
-    num++
+    setNum(num + 2)
     console.log('counter work?', num)
   }
 
   const onDecrease = () => {
-    num--
+    setNum(num - 2)
     console.log('counter work?', num)
   }
 
@@ -17,8 +17,8 @@ const Counter2 = () => {
     //prettier-ignore
     <div>
       <h1>{num}</h1>
-      <button onClick={onIncrease}>+1</button>
-      <button onClick={onDecrease}>-1</button>
+      <button onClick={onIncrease}>+2</button>
+      <button onClick={onDecrease}>-2</button>
     </div>
   )
 }
