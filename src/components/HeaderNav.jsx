@@ -9,8 +9,8 @@ const HeaderNav = () => {
       <Link to={'/profile'}>Profile</Link> */}
       {routes.map((route, index) => (
         <Link key={route.path || index} to={route.path}>
-          {' '}
           {route.title}
+          {' | '}
         </Link>
       ))}
     </div>
