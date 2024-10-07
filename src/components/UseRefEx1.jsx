@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react'
 
 // 첫번째 사용 경우
-// useRef 변화는 감지해야 되지만, 렌더링은 하고 싶지 않을때
+// useRef 변화는 감지해야 되지만, 렌더링(화면업데이트)은 하고 싶지 않을때
 
 const UseRefEx1 = () => {
   const [count, setCount] = useState(0)
