@@ -5,6 +5,7 @@ import ProfilePage from '../pages/ProfilePage'
 import PropsPage from './../pages/PropsPage'
 import ThreePage from '../pages/ThreePage'
 import CounterPage from '../pages/CounterPage'
+import InputPage from './../pages/InputPage'
 
 //React Routes, Route 사용시 배열로 관리하기
 const routes = [
@@ -42,6 +43,12 @@ const routes = [
     path: '/useState',
     element: <CounterPage />,
     title: 'useState 연습',
+  },
+
+  {
+    path: '/input',
+    element: <InputPage />,
+    title: 'input 연습',
   },
 ]
 
