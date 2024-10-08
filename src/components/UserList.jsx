@@ -1,18 +1,21 @@
 import React from 'react'
 
 //prettier-ignore
-const User = ({user}) => {
+const User = ({user, onRemove}) => {
   return(
   <div>
-    <b>이름 : {user.username} 이메일 : {user.email}</b>
+    <b>
+      이름 : {user.username} 이메일 : {user.email}
+      <button onClick={() => onRemove(user.id)}>삭제</button>
+    </b>
   </div>) 
 }
 
-const UserList = ({ users }) => {
+const UserList = ({ users, onRemove }) => {
   return (
     <div>
       {users.map((user) => (
-        <User user={user} key={user.id} />
+        <User onRemove={onRemove} user={user} key={user.id} />
       ))}
     </div>
   )

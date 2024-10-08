@@ -55,6 +55,12 @@ const UserCrudPage = () => {
     nextId.current += 1
   }
 
+  const onRemove = (id) => {
+    // user.id 가 파라미터로 일치하지 않는 원소만 추출해서 새로운 배열을 만듬
+    // = user.id 가 id 인 것을 제거함
+    setUsers(users.filter((user) => user.id !== id))
+  }
+
   return (
     <div className="text-center mt-5">
       <CreateUser
@@ -63,7 +69,7 @@ const UserCrudPage = () => {
         onChange={onChange}
         onCreate={onCreate}
       ></CreateUser>
-      <UserList users={users}></UserList>
+      <UserList users={users} onRemove={onRemove}></UserList>
     </div>
   )
 }
