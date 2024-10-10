@@ -1,9 +1,14 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 
 //https://sample.bmaster.kro.kr/contacts?pageno=1&pagesize=10
 const AxiosClient = () => {
   const [data, setData] = useState([])
+
+  //처음 랜더링 될때 한번만 실행
+  useEffect(() => {
+    getClick()
+  }, [])
 
   const getClick = () => {
     axios
