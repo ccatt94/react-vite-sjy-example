@@ -11,6 +11,8 @@ import UseRefPage from './../pages/UseRefPage'
 import UseRefPage2 from './../pages/UseRefPage2'
 import UserArrayPage from '../pages/UserArrayPage'
 import UserCrudPage from '../pages/UserCrudPage'
+import AxiosPage from './../pages/AxiosPage'
+import AxiosClientPage from './../pages/AxiosClientPage'
 
 //React Routes, Route 사용시 배열로 관리하기
 const routes = [
@@ -79,6 +81,19 @@ const routes = [
     //element: <UserArrayPage />,
     element: <UserCrudPage />,
     title: 'userpage',
+  },
+
+  {
+    path: '/axiospage',
+    //element: <AxiosPage />,
+    element: <AxiosPage />,
+    title: 'axiospage',
+  },
+
+  {
+    path: '/axiosclient',
+    element: <AxiosClientPage />,
+    title: 'axiosclient',
   },
 ]
 
